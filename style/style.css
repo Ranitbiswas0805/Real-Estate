@@ -1,0 +1,958 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* background-color: aqua; */
+}
+
+:root {
+    --nav_head: "DM Serif Display", serif;
+}
+
+/* Common class */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    padding: 0 15px;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-33 {
+    width: 33.33%;
+}
+
+.button {
+    /* border: 1px solid black; */
+    width: 14%;
+    font-size: 18px;
+    padding: 18px 50.8px;
+    border-radius: 30px;
+}
+
+.btn_transparent {
+    background-color: rgba(158, 156, 156, 0.2);
+}
+
+.section_padding {
+    padding: 100px 0;
+}
+
+.section_heading {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 16px;
+}
+
+.section_text {
+    color: black;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.btn_black {
+    background-color: black;
+    color: white;
+}
+
+.btn_black:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn_white {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.btn_white:hover {
+    background-color: black;
+    color: white;
+
+}
+
+/* common element */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+span {
+    color: white;
+
+}
+
+hr {
+    width: 20%;
+    border-style: dashed;
+    margin: 100px auto 0;
+}
+
+/* Navbar */
+.navbar {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 15;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar_brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar_brand i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.navbar_list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar_list li {
+    padding: 0 40px;
+}
+
+.navbar_button {
+    width: 14.39%;
+    /* border: 1px solid red; */
+    padding: 18px 2px;
+    border-radius: 56px;
+    backdrop-filter: blur(5px);
+    /* border: 1px solid black; */
+}
+
+.navbar_text {
+    font-family: var(--nav_head);
+    font-size: 30px;
+}
+
+.toggler {
+    display: none;
+}
+
+
+/* Banner */
+.banner {
+    height: 100vh;
+    background-image: url("../images/banner.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.banner_padding {
+    padding: 200px 0;
+}
+
+.banner .banner_heading {
+    width: 57.5%;
+    font-size: 75px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.banner .banner_text {
+    width: 39%;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.banner_button {
+    width: 33.33%;
+    padding: 14px 40px;
+    background-color: gray;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+#search_button {
+    background-color: gray;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.search_filter {
+    width: 650px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 40px;
+    padding: 18px 30px;
+    box-shadow: 0 0 15px black;
+}
+
+.search_filter_content {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+    /* background-color: black; */
+    border-radius: 25px;
+}
+
+.search_filters_values {
+    width: 75%;
+}
+
+.search_filter_content .filters,
+.values {
+    width: 98%;
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.search_filter_content .filters {
+    margin-bottom: 10px;
+}
+
+.search_filter_content .filters select {
+    border: none;
+}
+
+#citystreet {
+    margin-right: 40px;
+}
+
+#typology_of_rent {
+    margin: 0 40px;
+}
+
+#price {
+    margin-left: 20px;
+}
+
+#street {
+    margin-left: 5px;
+    margin-right: 40px;
+}
+
+#villa {
+    margin-left: 65px;
+}
+
+#dollar {
+    margin-left: 145px;
+}
+
+.search_filter_content .values span {
+    color: black;
+}
+
+.search_filter_content .search_button {
+    background-color: black;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    color: white;
+}
+
+.search_filter_content .search_button i {
+    margin-right: 10px;
+}
+
+/* Card section */
+.cards_section {
+    /* background-image: url("../images/left.png");
+    background-repeat: no-repeat; */
+    padding: 100px 0;
+}
+
+.card_text_content {
+    /* border: 1px solid black; */
+    width: 51.41%;
+    margin: 0 auto 90px;
+}
+
+
+.cards_section {
+    background-image: url("../images/building_back.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+.card_content {
+    width: 31%;
+    /* border: 2px solid black; */
+    padding: 10px 16px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px gray;
+    margin-bottom: 15px;
+    background-color: white;
+    margin-right: 20px;
+}
+.card_content_last{
+    width: 31%;
+    /* border: 2px solid black; */
+    padding: 10px 16px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px gray;
+    margin-bottom: 15px;
+    background-color: white;
+}
+
+.card_row img {
+    width: 100%;
+    /* border: 2px solid black; */
+    margin-bottom: 26px;
+}
+
+.card_content p {
+    margin-bottom: 12px;
+    color: black;
+}
+
+.card_upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.card_upper p {
+    margin: 0 32px 0 0;
+    font-weight: 0;
+    font-size: 14px;
+    color: black;
+}
+
+.card_content_text {
+    font-weight: 700;
+}
+
+.residance_text {
+    margin: 0 auto;
+    width: 51.41%;
+}
+
+.residence_button {
+    width: 43%;
+    margin: 50px auto;
+    /* border: 1px solid black; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.residence_button .button {
+    width: 203px;
+    padding: 13px 26px;
+}
+
+.residence_button>a {
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+.map img {
+    width: 100%;
+}
+
+/* work */
+.work {
+    background-image: url("../images/backgound_building.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.work_content {
+    width: 51.41%;
+    margin: 0 auto 170px;
+
+}
+
+.card_row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work_card_content {
+    width: 30%;
+    padding: 105px 30px 20px;
+    /* border: 1px solid black; */
+    border-radius: 56px;
+    background-color: white;
+    box-shadow: 0 1px 5px black;
+    margin-bottom: 20px;
+}
+
+.card_content_real {
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.card_head {
+    color: black;
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card_text {
+    color: black;
+    font-size: 20px;
+}
+
+.icon_card {
+    font-size: 25px;
+    background-color: rgb(180, 180, 180);
+    border: 15px solid rgb(180, 180, 180);
+    border-radius: 50px;
+    margin-bottom: 15px;
+}
+
+
+/* Get house part */
+.house_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.house_text_part {
+    width: 51%;
+}
+
+.house_heading {
+    margin-bottom: 60px;
+}
+
+.house_heading .section_heading {
+    text-align: left;
+}
+
+.icon_text_part1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.icon_text_part2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.house_text_part i {
+    font-size: 25px;
+    border: 10px solid lightgray;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+.icon_text_part1 span {
+    width: 450px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: black;
+}
+
+.icon_text_part2 span {
+    width: 409px;
+    font-size: 16px;
+    margin-left: 10px;
+    color: black;
+}
+
+/* app */
+.app_padding {
+    padding: 20px 0 120px;
+}
+
+.app_content {
+    background-image: url("../images/back_app.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+    padding: 90px 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.app_text {
+    width: 617px;
+}
+
+.app_text .section_heading {
+    margin-bottom: 20px;
+    text-align: left;
+    color: white;
+}
+
+.app_text .section_text {
+    display: inline-block;
+    text-align: left;
+    width: 593px;
+    color: white;
+}
+
+.apps {
+    padding-top: 15px;
+}
+
+.apps img {
+    margin-right: 15px;
+}
+
+.app_button {
+    display: flex;
+    align-items: center;
+}
+
+.button_back {
+    width: 100%;
+    /* border: 1px solid red;    */
+    padding: 18px 2px;
+    border-radius: 56px;
+    backdrop-filter: blur(5px);
+    /* border: 1px solid black; */
+}
+
+/* Footer */
+footer {
+    /* background-color: black; */
+
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer hr {
+    width: 100%;
+    border: .1px solid black;
+}
+
+.footer_bar {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer_brand {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer_logo i {
+    font-size: 30px;
+    margin-right: 10px;
+    color: black;
+}
+
+.footer_brand_part {
+    margin-bottom: 20px;
+}
+
+.footer_brand_part i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.footer_text span {
+    font-family: var(--nav_head);
+    font-size: 30px;
+    color: black;
+}
+
+.footer_details {
+    width: 442px;
+    margin-bottom: 20px;
+}
+
+.footer_details span {
+    color: black;
+}
+
+.footer_lists {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list_items {
+    margin-right: 60px;
+}
+
+.list_head {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.footer_lists li {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width:1399px) {
+    .banner_padding {
+        padding: 120px 0;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .navbar_brand {
+        width: 15%;
+    }
+
+    .navbar_logo i {
+        font-size: 20px;
+    }
+
+    .navbar_text span {
+        font-size: 35px;
+    }
+
+    .navbar_button {
+        width: 15%;
+    }
+
+    .button {
+        font-size: 11px;
+    }
+
+    .banner_padding {
+        padding: 120px 0;
+    }
+
+    .card_row {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media screen and (max-width:991px) {
+    .navbar_text span {
+        font-size: 30px;
+    }
+
+    .navbar_button {
+        width: 16%;
+    }
+
+    .navbar_list li {
+        padding: 0 28px;
+    }
+
+    .navbar_list a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .banner_padding {
+        padding: 115px 0;
+    }
+
+    .banner_content {
+        align-items: center;
+    }
+
+    .banner_heading span {
+        font-size: 48px;
+    }
+
+}
+
+@media screen and (max-width:767px){
+    .card_row{
+        display: flex;
+        justify-content: center;
+    }
+    .col-m-80{
+        width: 80%;
+    }
+    .house_content{
+        display: flex;
+        justify-content: center;
+    }
+    .house_text_part{
+        width: 90%
+    }
+}
+
+@media screen and (max-width:575px) {
+    .navbar {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .navbar_brand {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    nav {
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+    }
+
+    .navbar_button {
+        /* border: 1px solid white; */
+        width: 50%;
+        padding: 15px 5px;
+        display: none;
+    }
+
+    .toggler {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        /* margin: 10px 0 0 150px; */
+        /* border: 1px solid white;  */
+        padding: 10px;
+        text-align: right;
+    }
+
+    .navbar_item {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    .navbar_list {
+        padding-top: 20px;
+        flex-direction: row;
+        /* border: 1px solid white; */
+        display: none;
+
+    }
+
+    .nav_list li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar_button {
+        /* border: 1px solid white; */
+        width: 35%;
+        padding: 15px 5px;
+        display: none;
+    }
+
+    .section_padding {
+        padding: 100px 0;
+    }
+
+    .banner_content {
+        width: 100%;
+    }
+
+    .banner_heading {
+        width: 100%;
+        text-align: center;
+        line-height: .8;
+        margin: 0 auto;
+    }
+
+    .banner_heading span {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .banner_text {
+        width: 70%;
+        font-size: 15px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .banner_padding {
+        padding: 100px 0;
+    }
+
+    .banner_text span {
+        width: 100%;
+        font-size: 14px;
+
+    }
+
+    .banner_button {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .search_filter {
+        left: 52%;
+        width: 90%;
+        display: flex;
+    }
+
+    .search_filter_content .filters,
+    .values {
+        width: 100%;
+
+    }
+
+    #citystreet {
+        margin-right: 10px;
+    }
+
+    #typology_of_rent {
+        margin: 0 20px;
+    }
+
+    #price {
+        margin-left: 5px;
+    }
+
+    #street {
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+
+    #villa {
+        margin-left: 40px;
+    }
+
+    #dollar {
+        margin-left: 90px;
+    }
+    .card_content_last{
+        width: 90%;
+    }
+
+    .section_heading {
+        width: 80%;
+    }
+
+    .section_text {
+        width: 80%;
+    }
+
+    .card_content {
+        width: 90%;
+        margin: 0 auto 18px;
+        padding: 15px;
+    }
+
+    .work_content,
+    .residance_text {
+        width: 100%;
+    }
+
+    .section_heading {
+        font-size: 35px;
+    }
+
+    .col-sm-100 {
+        width: 90%;
+    }
+
+    .work_card_content {
+        margin: 20px auto;
+    }
+
+    .house_content {
+        justify-content: center;
+    }
+
+    .house_text_part {
+        width: 100%;
+    }
+
+    .app_content {
+        padding: 20px 15px;
+    }
+
+    .app_text {
+        width: 100%;
+    }
+
+    .app_text .section_heading {
+        margin-bottom: 20px;
+        text-align: center;
+        color: white;
+    }
+
+    .app_text .section_text {
+        text-align: center;
+        width: 100%;
+        color: white;
+    }
+
+}
